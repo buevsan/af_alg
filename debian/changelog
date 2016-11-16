@@ -1,3 +1,13 @@
+af-alg (0.0.1-2.1) UNRELEASED; urgency=medium
+
+  * Non-maintainer upload.
+  * Added some build dependency information
+  * Added configure variable pluginsdir to point to dest directory
+  * Removing wrong patch for ./configure srcipt
+  * Tested build for jessie:armel    
+
+ -- Alexander V. Buev <san@zzz.spb.ru>  Wed, 16 Nov 2016 17:24:11 +0300
+
 af-alg (0.0.1-2) trusty; urgency=medium
 
   * Initial release. (Closes: github issue #1)

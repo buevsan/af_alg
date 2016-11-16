@@ -1,0 +1,22 @@
+Index: af_alg/configure.ac
+===================================================================
+--- af_alg.orig/configure.ac
++++ af_alg/configure.ac
+@@ -46,9 +46,16 @@ PKG_CHECK_MODULES(OPENSSL, [
+   ])
+ ])
+ 
++#plugindir="\$(libdir)/ssl/engines"
++#plugindir="\$(libdir)/openssl-1.0.0/engines"
++AC_ARG_VAR(plugindir, [Directory where openssl plugin must be installed])
++
+ # Set the plugindir where plugins should be installed (for src/Makefile.am)
++#AC_SUBST(plugindir)
++
++AS_IF([test "x$plugindir" = "x"], [
+   plugindir="\$(libdir)/ssl/engines"
+-AC_SUBST(plugindir)
++])
+ 
+ # Set proper LDFLAGS for plugins
+ AC_SUBST(GST_PLUGIN_LDFLAGS)

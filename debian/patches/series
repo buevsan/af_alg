@@ -1,1 +1,2 @@
-fix-engine-install-target.patch
+add-plugindir-var.patch
+build-fix.patch

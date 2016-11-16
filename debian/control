@@ -3,10 +3,18 @@ Maintainer: Steve Arnold <nerdboy@gentoo.org>
 Section: utils
 Priority: optional
 Standards-Version: 3.9.6
-Build-Depends: debhelper (>= 9), libssl-dev (>= 1.0.1k-3+deb8u3)
+Build-Depends: debhelper (>= 9), libssl-dev (>= 1.0.1k-3+deb8u3), dh-autoreconf, pkg-config 
 
 Package: af-alg
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: af_alg engine for openssl and openssh
  Provides an openssl crypto engine for kernel crypto and hash modules.
+
+Package: af-alg-dbg
+Architecture: any
+Depends: ${misc:Depends}, af-alg (= ${binary:Version}) 
+Section: debug
+Priority: extra
+Description: af_alg engine for openssl and openssh (debug files)
+ Provides an openssl crypto engine debug files
