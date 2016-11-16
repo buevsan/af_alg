@@ -4,7 +4,7 @@
 	dh $@ --with autoreconf
 
 override_dh_auto_configure:
-	dh_auto_configure -- plugindir=/usr/lib/$(DEB_BUILD_MULTIARCH)/openssl-1.0.0/engines 
+	dh_auto_configure -- plugindir=/usr/lib/$(DEB_HOST_MULTIARCH)/openssl-1.0.0/engines 
 
 override_dh_strip:
 	dh_strip --dbg-package=af-alg-dbg
